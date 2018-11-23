@@ -1,0 +1,22 @@
+{
+    "main": "index.js",
+    "compilerOptions": {
+      "baseUrl": "tsconfig",
+      "lib": ["es2017", "dom"],
+      "declaration": true,
+      "module": "commonjs",
+      "rootDir": "./src",
+      "outDir": "./dist",
+      "moduleResolution": "node",
+      "noUnusedParameters": false,
+      "strictNullChecks": false,
+      "noEmitOnError": false,
+      "skipDefaultLibCheck": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "target": "es6",
+      "types": ["jasmine", "node"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["src/*/files/**/*", "src/**/*_spec.ts"]
+  }

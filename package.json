@@ -1,0 +1,55 @@
+{
+  "name": "ng-schematics-utils",
+  "version": "1.0.0",
+  "author": "Manish lakhara",
+  "description": "🛠️ Useful exported utilities directly taken from @angular/schematics github repo. All credits go to Angular team",
+  "homepage": "https://github.com/mlakhara/ng-schematics-utils.git",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mlakhara/ng-schematics-utils.git"
+  },
+  "keywords": [
+    "schematic",
+    "schematics",
+    "utility",
+    "utilities",
+    "util",
+    "utils",
+    "angular",
+    "devkit",
+    "material"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:docs": "typedoc --options ./.typedoc.json",
+    "clean": "rimraf ./dist",
+    "clean:docs": "rm -rf ./docs",
+    "format": "prettier --write '**/*.ts' '**/*.json'",
+    "format:staged": "pretty-quick --staged",
+    "precommit": "npm run format:staged",
+    "prepublish": "npm run clean && npm run build",
+    "publish:docs": "./scripts/publish-docs.sh",
+    "test": "npm run build && jasmine src/**/*_spec.js"
+  },
+  "dependencies": {
+    "@angular-devkit/core": "^7.0.3",
+    "@angular-devkit/schematics": "^7.0.6",
+    "npm-registry-client": "^8.5.1",
+    "parse5": "^5.0.0",
+    "rimraf": "^2.6.2",
+    "rxjs": "^6.0.0",
+    "typescript": "^2.5.2"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.6.0",
+    "@types/node": "^8.0.31",
+    "husky": "^0.14.3",
+    "jasmine": "^2.8.0",
+    "prettier": "^1.13.5",
+    "pretty-quick": "^1.6.0",
+    "typedoc": "^0.11.1"
+  }
+}
