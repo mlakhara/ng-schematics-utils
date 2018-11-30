@@ -1,6 +1,6 @@
 {
   "name": "ng-schematics-utils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Manish lakhara",
   "description": "🛠️ Useful exported utilities directly taken from @angular/schematics github repo. All credits go to Angular team",
   "homepage": "https://github.com/mlakhara/ng-schematics-utils.git",
@@ -41,7 +41,7 @@
     "parse5": "^5.0.0",
     "rimraf": "^2.6.2",
     "rxjs": "^6.0.0",
-    "typescript": "^2.5.2"
+    "typescript": "^3.1.6"
   },
   "devDependencies": {
     "@types/jasmine": "^2.6.0",
