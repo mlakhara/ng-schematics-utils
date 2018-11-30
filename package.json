@@ -9,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/mlakhara/ng-schematics-utils.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "schematic",
     "schematics",
@@ -23,14 +26,13 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "npm run clean && tsc -p tsconfig.json",
     "build:docs": "typedoc --options ./.typedoc.json",
     "clean": "rimraf ./dist",
     "clean:docs": "rm -rf ./docs",
     "format": "prettier --write '**/*.ts' '**/*.json'",
     "format:staged": "pretty-quick --staged",
     "precommit": "npm run format:staged",
-    "prepublish": "npm run clean && npm run build",
     "publish:docs": "./scripts/publish-docs.sh",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
